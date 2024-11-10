@@ -166,41 +166,42 @@ Cоздаем папки двумя разными способами
 
 # Делаем grafana на сайте
 
-•	переходим на сайт localhost:3000
+   •	переходим на сайт localhost:3000
 
-User & Password GRAFANA: admin
+                User & Password GRAFANA: admin
 
-Код графаны: 3000
+                Код графаны: 3000
 
-Код прометеуса: http://prometheus:9090
+                Код прометеуса: http://prometheus:9090
 
-•	в меню выбираем вкладку Dashboards и создаем Dashboard
+   •	в меню выбираем вкладку Dashboards и создаем Dashboard
 
-ждем кнопку +Add visualization, а после "Configure a new data source"
+                ждем кнопку +Add visualization, а после "Configure a new data source"
 
-выбираем Prometheus
+                выбираем Prometheus
 
-Connection
+                Connection
 
-http://prometheus:9090
+                http://prometheus:9090
 
-•	Authentication
+   •	Authentication
 
-Basic authentication
+                Basic authentication
 
-User: admin
+                User: admin
 
-Password: admin
+                Password: admin
 
-Нажимаем на Save & test и должно показывать зелёную галочку
+                Нажимаем на Save & test и должно показывать зелёную галочку
 
-•	в меню выбираем вкладку Dashboards и создаем Dashboard
+   •	в меню выбираем вкладку Dashboards и создаем Dashboard
 
-ждем кнопку "Import dashboard"
+                ждем кнопку "Import dashboard"
 
-Find and import dashboards for common applications at grafana.com/dashboards: 1860 //ждем кнопку Load
+                Find and import dashboards for common applications at grafana.com/dashboards: 1860 //ждем кнопку Load
 
-Select Prometheus ждем кнопку "Import"
+                Select Prometheus ждем кнопку "Import"
+
 
 
 
