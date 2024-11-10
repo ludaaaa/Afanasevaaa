@@ -16,7 +16,7 @@
 
 Устанавливает утилиту wget на систему
 
-   `sudo yum install wget`
+    `sudo yum install wget`
 
 ![image](https://github.com/user-attachments/assets/3239b0dc-37c1-4c15-b1d3-1a7bfec95093)
 
