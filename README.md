@@ -204,6 +204,14 @@ Cоздаем папки двумя разными способами
 
 
 
+![image](https://github.com/user-attachments/assets/1baa7e02-29d9-48d1-bcb1-7e9b3d81fcac)
+
+
+
+![image](https://github.com/user-attachments/assets/ac3ec5fc-f576-415a-a90a-ce116c401c42)
+
+
+
 
 
 # Делаем VictoriaMetrics
@@ -218,10 +226,38 @@ Cоздаем папки двумя разными способами
 
 После prometheus вставляем vmagent (но у нас уже вставлен готовый докер)
 
-![image](https://github.com/user-attachments/assets/dafc71d3-040c-43d8-84d4-36b568ecbaf8)
+![image](https://github.com/user-attachments/assets/6c101f26-b2e3-4070-8a93-f15c00d49ecb)
 
-Ангелина помоги
-виктория метрик 8428
+
+Захом в connection там где мы писали http//:prometheus:9090 пишем http:victoriametrics:9090(8428) И заменяем имя из "Prometheus-2" в "Vika" нажимаем на dashboards add visualition выбираем "Vika" снизу меняем на "code" Переходим в терминал и пишем
+
+`echo -e "# TYPE OILCOINT_metric1 gauge\nOILCOINT_metric1 0" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus`
+
+• команда отправляет бинарные данные (например, метрики в формате Prometheus) на локальный сервер, который слушает на порту 8428.
+
+`curl -G 'http://localhost:8428/api/v1/query' --data-urlencode 'query=OILCOINT_metric1'`
+
+• команда делает запрос к API для получения данных по метрике OILCOINT_metric1
+
+• команда выводит текст, который может быть использован для определения метрики в формате, совместимом с Prometheus
+
+• команда выводит информацию о типе и значении этой метрики в формате, который может быть использован системой мониторинга Prometheus.
+
+![image](https://github.com/user-attachments/assets/89d885aa-95ec-41c0-b214-48594f8830ac)
+
+Значение 0 меняем на любое другое
+
+Копируем переменную OILCOINT_metric1 и вставляем в query
+
+Нажимаем run
+
+![image](https://github.com/user-attachments/assets/c9a52b4c-1b65-4def-ac8b-b78a188faacb)
+
+![image](https://github.com/user-attachments/assets/7f1e473c-64e6-41ac-a44e-5ef4203a3153)
+
+Копируем переменную OILCOINT_metric1 и вставляем в code
+
+![image](https://github.com/user-attachments/assets/014556de-9a3c-48d6-9d9b-6122f7aae2dd)
 
 
 
