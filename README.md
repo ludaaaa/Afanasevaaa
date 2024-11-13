@@ -229,7 +229,7 @@ Cоздаем папки двумя разными способами
 ![image](https://github.com/user-attachments/assets/6c101f26-b2e3-4070-8a93-f15c00d49ecb)
 
 
-Захом в connection там где мы писали http//:prometheus:9090 пишем http:victoriametrics:9090(8428) И заменяем имя из "Prometheus-2" в "Vika" нажимаем на dashboards add visualition выбираем "Vika" снизу меняем на "code" Переходим в терминал и пишем
+Захом в connection там где мы писали http://prometheus:9090 пишем http://victoriametrics:8428 И заменяем имя из "Prometheus-2" в "Vika" нажимаем на dashboards add visualition выбираем "Vika" снизу меняем на "code" Переходим в терминал и пишем
 
      echo -e "# TYPE OILCOINT_metric1 gauge\nOILCOINT_metric1 0" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus
 
